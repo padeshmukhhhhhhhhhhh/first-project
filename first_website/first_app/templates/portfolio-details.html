@@ -1,0 +1,533 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+  <main id="main">
+
+    <!-- Portfolio Details Page Title & Breadcrumbs -->
+    <div data-aos="fade" class="page-title bg-secondary text-white">
+	   
+      <div class="heading">
+	       
+        <div class="container">
+          <div class="row d-flex  ">
+            <div class="col-lg-8">
+              <h1 class="text-white">Python training course online</h1>
+			     <div class="row mb-3">
+			         <div class="col-4  "><i class='bx bxs-zap' style='color:#f3e036'  ></i><small class=""> 4.99 Ratings</small> <i class='bx bx-bitcoin' style='color:#36e6f3'  ></i><small class=""> 31,831 learners</small></div>
+					  <div class="col-3  "> </div>
+					 
+			   </div>
+              <p class="mb-0">The advancement of computer languaging has made it easier for programmers to solve complex coding problems conveniently.</p> This has reduced time consumption and solved the crisis of the firms with cloud computing. The Python Online Courseat aims to teach students about the complexities of Python and ways to understand the language effectivel </p>
+			   <div class="row my-4">
+			         <div class="col-3 px-2 "> <i class='bx bxl-google '  style='color:#e8110e'></i><span class=""> 4.99/5.0 (32,831)</span></div>
+					  <div class="col-3 px-2 "> <i class='bx bxl-facebook-circle' style='color:#2f55bf'  ></i><span class=""> 4.99/5.0 (31,831)</span></div>
+					  <div class="col-3 px-2 "> <i class='bx bxs-star' style='color:#e6db1c'  ></i><span class=""> 4.99/5.0 (22,831)</span></div>
+					  <div class="col-3 px-2 "> <i class='bx bxs-phone-call' style='color:#2eda26'  ></i><span class=""> +91 9210333323</span></div>
+			   </div>
+			   <div class="row ">
+			     <div class="col-6 ">
+			       <button type="button" class="btn btn-warning btn-block container-fluid ">Interview Question</button>
+				 </div>  
+				 <div class="col-6">  
+				    <button type="button" class="btn btn-warning btn-block container-fluid  ">Apply Now</button>
+				 </div> 
+				</div>   
+		     </div>
+			<div class="col-lg-4 ">
+			  <img src="{% static 'assets/img/portfolio/python.png' %}"  class="w-100 h-75 " alt="python">
+			</div>
+          </div>
+		  <div class="row mt-5 ">
+		          <div class="col-3 border border-white py-1 mx-2 " style="width:250px;   ">
+				        <div class="row">
+						      <div class="col-3">
+ 							        <img src="{% static 'assets/img/portfolio/Batch-every.svg' %}" alt="python" class=" img-fluid">
+							  </div>
+							 <div class="col-9 ">
+							      <p>20000 + <br>Professionals Trained</p>
+						    </div>
+						</div>
+			     </div>			
+				  <div class="col-3 border border-white py-1 mx-2 " style="width:250px; ">		
+                         <div class="row">
+						      <div class="col-3">
+ 							        <img src="{% static 'assets/img/portfolio/Prof_Trained.svg' %}" alt="python" class="h-100 w-100">
+							  </div>
+							 <div class="col-9">
+							      <p>35 + <br>Batches every month</p>
+						    </div>
+					    </div>
+				  </div> 
+                   <div class="col-3 border border-white py-1 mx-2 " style="width:250px;   ">		
+                         <div class="row">
+						      <div class="col-3">
+ 							        <img src="{% static 'assets/img/portfolio/Country.svg' %}" alt="python" class="h-100 w-100">
+							  </div>
+							 <div class="col-9">
+							      <p>20 + <br>Country & Coumting</p>
+						    </div>
+					    </div>
+				   </div> 
+				    <div class="col-3 border border-white py-1 mx-2 "style="width:250px;   " >		
+                         <div class="row">
+						      <div class="col-3">
+ 							        <img src="{% static 'assets/img/portfolio/Corporate.svg' %}" alt="python" class="h-100 w-100">
+							  </div>
+							 <div class="col-9">
+							      <p>1000 + <br>Corporate Served
+                                            </p>
+						    </div>
+					    </div>
+				    </div> 
+               </div>                                                           
+             </div>    
+          </div>
+            <nav class="breadcrumbs">
+              <div class="container-fluid">
+                <ol>
+                <li><a href="index.html">Home</a></li>
+				 <li><a href="index.html">All Courses</a></li>
+                <li class="current">Course Details</li>
+              </ol>
+             </div>
+           </nav>
+     </div>
+	  
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio-details Section - Portfolio Details Page -->
+    <section id="portfolio-details" class="portfolio-details">
+
+      <div class="container-fluid  " data-aos="fade-up">
+        <nav class="navbar navbar-expand-sm text-dark bg-white  sticky-top">
+		<div class="container-fluid  ">
+			
+			<div class="collapse navbar-collapse  " id="mynavbar">
+				<ul class="navbar-nav d-flex justify-content-center">
+					<li class="nav-item mx-2 py-2 ">
+						<h6><a class="nav-link " href="#Overview">Overview</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#Upcoming Batches">Upcoming Batches</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#training">Training Options</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#Exam">Exam</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#Course">Course Curriculum</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#Reviews">Reviews</a></h6>
+					</li>
+					<li class="nav-item mx-2 py-2">
+						<h6><a class="nav-link" href="#faq">FAQs</a></h6>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+        
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-9" data-aos="fade-up">
+            <div class="portfolio-description">
+			 <section id="Overview">
+			    <div class="card mb-5 p-2 border border-white fw-bold">
+				  Skills Covered <br>
+				    <div class="row">
+					   <div class="col-5">
+				                  <span class="badge rounded-pill bg-light text-secondary border border-1 p-2 m-3">Python</span>
+				                       <span class="badge rounded-pill bg-light text-secondary border border-1 p-2 m-3">Developer</span>
+				         						 <span class="badge rounded-pill bg-light text-secondary border border-1 p-2 m-3">Programming</span>
+                        </div>					
+					</div>
+				 </div>
+                <h2 >Overview</h2>
+               <p>
+               We also focus on the basics of the subject and try to incorporate practical application utilities of the Python language. This way the students can approach the real-life computing problem without much trouble. Python Online Course Certification can be applied to other branches of computing as well. For example, if an aspirant is fully equipped with the idea of handling python
+               </p>
+               <p>
+                he can also approach subjects like data science and machine learning problems easily. Our objective at the institute is to prepare the aspirants for curating a magnificent and successful career for themselves.
+               </p>
+             </section>
+			 </div>
+              <div class="portfolio-description  ">
+			   <section id="Upcoming Batches">
+                <h2 >Upcoming Batches</h2>
+			   
+			      <ul class="list-group list-group-horizontal fs-5 ">
+                      <li class="list-group-item">Nov 07</li>
+                      <li class="list-group-item">SAT & SUN (two days) <br><small class="text-danger fs-6">weekend batch</small></li>
+                     <li class="list-group-item"><span class="badge rounded-pill bg-danger">&star;filling fast</span><br>Timings - 09:00 AM to 11:00 AM</li>
+                  </ul>
+                   <ul class="list-group list-group-horizontal fs-5 ">
+                      <li class="list-group-item">Nov 21</li>
+                      <li class="list-group-item">SAT & SUN (6 WEEKS) <br><small class="text-danger fs-6">weekend batch</small></li>
+                     <li class="list-group-item"><span class="badge rounded-pill bg-danger">&star;filling fast</span><br>Timings - 01:00 PM to 03:00 PM</li>
+                  </ul>
+				   <ul class="list-group list-group-horizontal fs-5 ">
+                      <li class="list-group-item">Dec 01 </li>
+                      <li class="list-group-item"> MON , THU (6 WEEKS)</li>
+                     <li class="list-group-item"><span class="badge rounded-pill bg-danger">&star;filling fast</span><br>Timings - 09:00 AM to 11:00 AM</li>
+                  </ul>
+				</section>  
+              </div>
+			  <div class="portfolio-description">
+			   <section id="training">
+                  <h2 >Training Options</h2>
+				  <div class="row">
+                     <div class="card   border border-white" style="width: 300px;">
+					    <div class="card-header border border-white fw-bold text-center">BLENDED LEARNING</div>
+                        <div class="card-body"><ul class="list-group">
+                                                     <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;30 hands-on projects to perfect the skills learnt</li>
+                                                     <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;3 simulation test papers for self-assessment</li>
+                                                     <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;Lab access to practice live during sessions</li>
+                                                    <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;24x7 learner assistance and support</li>
+                                              
+                                               </ul>
+					    </div>
+                        <div class="card-footer border border-white"><button type="button" class="btn btn-danger rounded-pill">Enquire Now</button></div>
+				     </div>
+					  <div class="card   border border-white" style="width: 300px;">
+					    <div class="card-header border border-white fw-bold text-center">SELF LEARNING</div>
+                        <div class="card-body"><ul class="list-group">
+                                              
+                                                 <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;30 hands-on projects to perfect the skills learnt</li>
+                                                 <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;3 simulation test papers for self-assessment</li>
+                                                 <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;Lab access to practice live during sessions</li>
+                                                 <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;24x7 learner assistance and support</li>
+                                               </ul>
+					    </div>
+                        <div class="card-footer border border-white"><button type="button" class="btn btn-danger rounded-pill">Enquire Now</button></div>
+				     </div>
+					  <div class="card   border border-white" style="width: 300px;">
+					    <div class="card-header border border-white fw-bold text-center">CORPORATE LEARNING</div>
+                        <div class="card-body"><ul class="list-group">
+                                                    <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;30 hands-on projects to perfect the skills learnt</li>
+                                                    <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;3 simulation test papers for self-assessment</li>
+                                                    <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;Lab access to practice live during sessions</li>
+                                                    <li class="list-group-item"><i class='bx bx-check'></i>&nbsp;24x7 learner assistance and support</li>
+                                             
+                                               </ul>
+					    </div>
+                        <div class="card-footer border border-white"><button type="button" class="btn btn-danger rounded-pill">Enquire Now</button></div>
+				     </div>
+				 </div>	 
+              </section>
+             </div >
+			   <div class="portfolio-description">
+			     <section id="Reviews">
+				       <h2>Python Core Training Course Online Reviews</h2>
+					   <div class="row">
+					     <div class="col-2">
+					         <div class="badge rounded-circle bg-danger h-75 w-50 fs-2">A</div>
+					      
+                          </div>
+						 <div class="col-7">
+						   <h6 class="fw-bold">Aman Sharma</h6>
+                           <p> It is a very good institute in case you are looking for a Py
+
+                             All the teachers are very helpful & provide lifetime support too. </p>
+						 </div>
+						 <div class="col-3">
+						 <i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i>
+						 </div>
+					   </div>
+					    <div class="row">
+					     <div class="col-2">
+					         <div class="badge rounded-circle bg-danger h-75 w-50 fs-2">S</div>
+					      
+                          </div>
+						 <div class="col-7">
+						   <h6 class="fw-bold">Shantani Kumar</h6>
+                           <p> It is a very good institute in case you are looking for a Py
+
+                             All the teachers are very helpful & provide lifetime support too. </p>
+						 </div>
+						 <div class="col-3">
+						 <i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i>
+						 </div>
+					   </div>
+					    <div class="row">
+					     <div class="col-2">
+					         <div class="badge rounded-circle bg-danger h-75 w-50 fs-2">A</div>
+					      
+                          </div>
+						 <div class="col-7">
+						   <h6 class="fw-bold">Aman Sharma</h6>
+                           <p> It is a very good institute in case you are looking for a Py
+
+                             All the teachers are very helpful & provide lifetime support too. </p>
+						 </div>
+						 <div class="col-3">
+						 <i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i><i class='bx bxs-star' style='color:#fbf602'  ></i>
+						 </div>
+					   </div>
+				        <h3 class="text-center "><u> View More</u></h3>
+				   </section>
+			    </div> 
+				   <div class="portfolio-description">
+			            <section id="Course">
+				            <h2>Python Core Training Course Online Curriculum</h2>
+					        <div class="row">
+					           <div class="col-12">
+					                <h5> Course Content</h5>
+					                        <div class="accordion" id="accordionExample">
+                                                       
+													     <div class="accordion-item">
+                                                                    <h2 class="accordion-header" id="headingOne">
+                                                                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                                        Introduction to programming
+                                                                            </button>
+                                                                     </h2>
+                                                               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                                  <div class="accordion-body">
+                                                                               <ul>
+                                                                                  <li>  What is a Script program? </li>
+                                                                                   <li>Types of Scripts </li>
+                                                                                    <li> Difference between Script and Programming Languages </li>
+                                                                                    <li>      Features and Limitation of Scripting </li>
+                                                                                    <li>   Types of programming Language Paradigms </li>
+                                                                               </ul> 
+                                                                   </div>
+                                                                </div>
+                                                          </div>
+                                                         <div class="accordion-item">
+                                                                     <h2 class="accordion-header" id="headingTwo">
+                                                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                                   Introduction to Python
+                                                                              </button>
+                                                                       </h2>
+                                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                                     <div class="accordion-body">
+                                                                               <ul>
+                                                                                  <li>  What is a Script program? </li>
+                                                                                   <li>Types of Scripts </li>
+                                                                                    <li> Difference between Script and Programming Languages </li>
+                                                                                    <li>      Features and Limitation of Scripting </li>
+                                                                                    <li>   Types of programming Language Paradigms </li>
+                                                                               </ul> 
+                                                                      </div>
+                                                                 </div>
+                                                          </div>
+                                                        <div class="accordion-item">
+                                                                   <h2 class="accordion-header" id="headingThree">
+                                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                                 Strings
+                                                                          </button>
+                                                                    </h2>
+                                                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                                     <div class="accordion-body">
+                                                                               <ul>
+                                                                                  <li>  What is a Script program? </li>
+                                                                                   <li>Types of Scripts </li>
+                                                                                    <li> Difference between Script and Programming Languages </li>
+                                                                                    <li>      Features and Limitation of Scripting </li>
+                                                                                    <li>   Types of programming Language Paradigms </li>
+                                                                               </ul> 
+                                                                      </div>
+                                                               </div>
+                                                         </div>
+													      <div class="accordion-item">
+                                                                   <h2 class="accordion-header" id="headingFour">
+                                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                                 Logical
+                                                                          </button>
+                                                                    </h2>
+                                                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                                     <div class="accordion-body">
+                                                                               <ul>
+                                                                                  <li>  What is a Script program? </li>
+                                                                                   <li>Types of Scripts </li>
+                                                                                    <li> Difference between Script and Programming Languages </li>
+                                                                                    <li>      Features and Limitation of Scripting </li>
+                                                                                    <li>   Types of programming Language Paradigms </li>
+                                                                               </ul> 
+                                                                        </div>
+                                                              </div>
+                                                        </div>
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+                                        </div>                            
+							   </div>
+						
+					        
+                           </div> 
+						       <h3 class="text-center my-3"><button class="btn btn-danger">Load More Chapters</button></h3>
+				       </section>
+			      </div> 
+               <div class="portfolio-description">
+			     <section id="Exam">
+				       <h2>Python Training Course Online Exam & Certification</h2>
+					   <p> Live your dream to be hired by top IT Companies with us, offering an array of professional courses with 100% Job Assistance</p>
+					   <div class="row">
+					     <div class="col-6">
+					       <img src="{% static 'assets/img/portfolio/hcl2.png' %}" alt="" class="flex-shrink-0 h-50 w-50 ">
+					       &nbsp; &nbsp; &nbsp;
+						   <img src="{% static 'assets/img/portfolio/amazon.png' %}" alt="" class="flex-shrink-0 h-50 w-25">
+						   <br>
+						   <br>
+						   <button type="button" class="btn btn-danger container-fluid">get it</button>
+                          </div>
+						 
+						 <div class="col-6">
+						   <img src="{% static 'assets/img/portfolio/certificate.png' %}" alt="" class="flex-shrink-0 h-100 w-100 ">
+						 </div>
+					   </div>
+				 
+				 </section>
+			  </div> 
+                    
+				<div class="portfolio-description">
+			            <section id="faq">
+				            <h2>Frequently Asked Questions</h2>
+					        <div class="row">
+					           <div class="col-12">
+					                
+					                        <div class="accordion" id="accordionExample">
+                                                       
+													     <div class="accordion-item">
+                                                                    <h2 class="accordion-header" id="headingOne">
+                                                                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                                       What is Python Core Course?
+                                                                            </button>
+                                                                     </h2>
+                                                               <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                                      <div class="accordion-body">
+                                                                               Python Core Course at AP2V teaches and trains the aspirants to develop Python programs and code in the computer language
+                                                                     </div>
+                                                                </div>
+                                                          </div>
+                                                         <div class="accordion-item">
+                                                                      <h2 class="accordion-header" id="headingTwo">
+                                                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                                   What is Advanced Python?
+                                                                              </button>
+                                                                       </h2>
+                                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                                      <div class="accordion-body">
+                                                                              While core Python handles the logic and questioning part of the language, Advanced Python enables you to utilise the knowledge of Python to understand machine learning techniques. 
+                                                                      </div>
+                                                                </div>
+                                                          </div>
+                                                        <div class="accordion-item">
+                                                                   <h2 class="accordion-header" id="headingThree">
+                                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                           Why data science use python only?
+                                                                          </button>
+                                                                    </h2>
+                                                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                                     <div class="accordion-body">
+                                                                               Data science can be studied effectively with the help of Python because it is the easiest and comprehensible language.
+                                                                      </div>
+                                                               </div>
+                                                         </div>
+													      <div class="accordion-item">
+                                                                     <h2 class="accordion-header" id="headingFour">
+                                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                             How to earn Python in depth?
+                                                                          </button>
+                                                                     </h2>
+                                                              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                                     <div class="accordion-body">
+                                                                              AP2V group of experts provide Python courses that dwell deeper into the functionalities of the language.
+                                                                     </div>
+                                                               </div>
+                                                         </div>
+											 </div> 	   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+													   
+                                                                      
+							   </div>
+						
+					        
+                           </div> 
+						     
+				       </section>
+			      </div> 	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+		      <div class="card  p-3 border border-1">
+				 
+				    <div class="row">
+					   <div class="col-7 pt-2 fs-5">
+				                 Contact us <br>
+								 09210333323
+					     </div>			 
+                         <div class="col-5">
+						     <img src="{% static 'assets/img/portfolio/call.png' %}" alt="" class="flex-shrink-0 h-100 w-100 ">
+                         </div>						 
+					</div>
+				 </div>
+             <div class="portfolio-info mt-4  d-flex justify-content-center row">
+			     <div class="col-12">
+                    <h3>Get more information</h3>
+                    <ul>
+                       <li> <input type="text" class="rounded-pill p-1 " placeholder="Full name"> </li>
+                       <li> <input type="text"  class="rounded-pill p-1" placeholder="Email"> </li>
+                       <li>Enquiry for <input type="radio" name="one">myself <input type="radio" name ="one">company </li>
+                       <li> <input type="textarea"  class="rounded-pill p-1" placeholder="write message"> </li>
+                      <li><a href="#" class="btn btn-danger rounded-pill"> submit </a> </li>
+                    </ul>
+				 </div>	 
+             </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio-details Section -->
+
+  </main>
+  {% endblock 'body' %}

@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+  <main id="main" class="  d-flex justify-content-center">
+    <div class="container row d-flex justify-content-center  m-5  ">
+	  <div class="col-md-6 col-lg-4 border border-2 py-2 px-4">
+	       <h3 class="fw-bold text-center">Login</h3><br>
+		
+	      <form  >
+		     
+			 
+			      <div class="form-group mb-2   ">
+                     <button type="submit" class="btn text-dark fw-bold  container-fluid border border-1 border-dark " ><img src="{% static 'assets/img/login/google-logo.png' %}" class=" mx-2 img-fluid" style="width:20px;">&nbsp;<span>Continue with Google</span></button>
+		         </div>
+		         <div class="form-group mb-2  ">
+                     <button type="submit" class="btn text-dark fw-bold container-fluid  border border-1 border-dark " ><img src="{% static 'assets/img/login/facebook-logo.png' %}" class=" mx-2 img-fluid" style="width:20px;  "><span>Continue with Facebook</span></button>
+		        </div>
+                <div class="form-group mb-2 ">
+       
+                    <input type="email" class="form-control     border border-1 border-dark" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone.</small>
+               </div>
+              <div class="form-group mb-2">
+            
+                 <input type="password" class="form-control   border border-1 border-dark" id="exampleInputPassword1" placeholder="Password">
+             </div>
+             <div class="form-group mb-1 mt-2">
+                <button type="submit" class="btn text-white fw-bold container-fluid  " style="background-color:#E116C6">Login</button>
+		    </div>
+		    <div class="form-group mb-1 mt-2">
+                or <a style="color:#E116C6">Forgot Password</a>
+		    </div>
+        </form>
+	     <div class="mt-4" style="color:#E116C6" >
+	        Do not have account &rarr; <a type="submit" href="{% url 'signup' %}">Create it</a>
+	     </div>
+	
+    </div>
+	
+ </div>
+  
+
+ </main>
+
+ {% endblock 'body' %}

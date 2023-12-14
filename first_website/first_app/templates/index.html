@@ -1,0 +1,694 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+
+  <main id="main">
+     <!-- Hero Section - Home Page -->
+     <section id="hero" class="hero">
+
+      <img src="{% static 'assets/img/hero-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Class</h2>
+            <p data-aos="fade-up" data-aos-delay="200">We are team of talented teachers.</p>
+          </div>
+          
+        </div>
+      </div>
+
+     </section><!-- End Hero Section -->
+   
+    <section id="portfolio" class="portfolio">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Explore Courses</h2>
+        <p>. Our courses have been developed by top IT organizations like CodeRed (premium cybersecurity tutorials), Microsoft (the world’s most successful software developer), the National Institute of Standards and Technology (a division of the US Department of Commerce) and the Computing Technology Industry Association (or CompTIA, an American IT certification group). We work with the best to bring you the best</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">PROGRAMMING</li>
+            <li data-filter=".filter-product">CLOUD COMPUTING</li>
+            <li data-filter=".filter-branding">ARTIFICIAL INTELLIGENCE</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4   col-md-6 portfolio-item isotope-item filter-product" >
+              <img src="{% static 'assets/img/masonry-portfolio/AWS-logo.png' %}" class="w-100 h-50 " alt=""><br>
+			  <h5 class="text-dark text-center">cloud computing</h5>
+              <div class="portfolio-info ">
+                <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4   col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/data.jpg' %}" class="w-100 h-50" alt="">
+			  	  <h5 class="text-dark text-center">Data science</h5>
+              <div class="portfolio-info">
+                 <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/java.webp' %}" class="w-100 h-50" alt="">
+			    <h5 class="text-dark text-center">Java</h5>
+              <div class="portfolio-info">
+                 <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/linux-4.webp' %}" class="w-100 h-50" alt="">
+			    <h5 class="text-dark text-center">Linux</h5>
+              <div class="portfolio-info">
+                 <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/python.webp' %}" class="w-100 h-50" alt="">
+			   <h5 class="text-dark text-center">Python</h5>
+              <div class="portfolio-info">
+                 <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'assets/img/masonry-portfolio/salesforce.webp' %}" class="w-100 h-50" alt="">
+			   <h5 class="text-dark text-center">Salesforce</h5>
+              <div class="portfolio-info">
+                  <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/Machine-Learning_02.webp' %}" class="w-100 h-50" alt="">
+			   <h5 class="text-dark text-center">Machine Learning</h5>
+              <div class="portfolio-info">
+                  <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'assets/img/masonry-portfolio/windows.jpg' %}" class="w-100 h-50" alt="">
+			   <h5 class="text-dark text-center">Windows Server</h5>
+              <div class="portfolio-info">
+                 <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'assets/img/masonry-portfolio/azure.jpg' %}" class="w-100 h-50" alt="">
+			  <h5 class="text-dark text-center"> Microsoft Azure</h5>
+              <div class="portfolio-info">
+                <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+			
+			 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'assets/img/masonry-portfolio/AI.jpg' %}" class="w-100 h-50" alt="">
+			  <h5 class="text-dark text-center">Artificial Intelligence</h5>
+              <div class="portfolio-info">
+                <h4>You will get:</h4>
+                <ul>
+				<li> 24x7 open library</li>
+				<li>weekly assignment</li>
+				<li>100% job assistance</li>
+				</ul>
+                
+                <a href="portfolio-details.html" title="More Details" class="details-link"><button class="btn  bg-dark bg-opacity-70 text-white border border-1">view details</button></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio Section -->
+
+  
+
+   
+
+    <!-- Services Section - Home Page -->
+    <section id="services" class="services">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Learning Path</h2>
+        <p>Offering IT Courses profession wise</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class='bx  bxl-python bx-tada bx-flip-horizontal' ></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Python Developer</a></h4>
+                <p class="description">Get yourself trained with Python Core and Python Advance by the industry’s experts</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class='bx bxl-aws bx-tada bx-flip-horizontal' ></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">AWS Solution Architect</a></h4>
+                <p class="description">Today’s businesses are using Cloud Technologies for their security and a plethora of advantages. Your career as an AWS solution Architect is secured, high-paying, and futuristic</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class='bx bxs-brain bx-tada' ></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">AI Developer</a></h4>
+                <p class="description">Artificial Intelligence is impacting the future of every industry and acting as the main driver of emerging technologies such as robotics and IoT. Shaping your future as an AI Developer is all about securing your future</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class='bx bxl-java bx-tada' ></i></div>
+              <div>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Java Developer</a></h4>
+                <p class="description">One of the reasons why we are the Best java instituteis because in our teaching pattern there is a scope for innovation. We don’t believe in the approach of book learning wherein you will sit for hours reading through a course manual and being taught by average lecturers</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+   
+
+   
+   
+    
+
+    <!-- Team Section - Home Page -->
+    <section id="team" class="team">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>TOPPERS</h2>
+       
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Walter White</h4>
+              <span>Full stack developer</span>
+              <p class="text-dark">Traning:6-8 months <br> <b> Package:12 LPA </b></p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>Sarah Jhonson</h4>
+              <span>Data scientist</span>
+               <p class="text-dark">Traning:4-6 months <br> <b> Package:7.2 LPA </b></p>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-img">
+              <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info text-center">
+              <h4>William Anderson</h4>
+              <span>Linux Administrator</span>
+              <p class="text-dark">Traning:4-5 months <br> <b> Package:5 LPA </b></p>
+            </div>
+          </div><!-- End Team Member -->
+
+         
+
+        </div>
+
+      </div>
+
+    </section><!-- End Team Section -->
+
+    
+
+    <!-- Testimonials Section - Home Page -->
+    <section id="testimonials" class="testimonials">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>HAPPY CLIENTS</h3>
+            <h5>
+              What our clients are saying
+            </h5>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper">
+              <template class="swiper-config">
+                {
+                "loop": true,
+                "speed" : 600,
+                "autoplay": {
+                "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+                }
+                }
+              </template>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                         <div class="d-flex">
+                     
+                      <div>
+                        <h3>Saul Goodman</h3>
+                        <h4>TCS</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span> I got good job opportunities and a salary after completing the course. The experience is nice about the program.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                         <div class="d-flex">
+                     
+                      <div>
+                        <h3>Sara Wilsson</h3>
+                        <h4>HCL</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>I have recently completed my Linux Training. Moreover, the training offered by the specialists for world-class and prepares the students for the Corporate world.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                        <div class="d-flex">
+                     
+                      <div>
+                        <h3>Jena Karlis</h3>
+                        <h4>Citi</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>This's really a good initiative to keep the peoples educated in the new technologies and thereby improve their knowledge. This also provides a great opportunity for people to develop their careers.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                        <div class="d-flex">
+                     
+                      <div>
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span> It is a good place to learn. Helps in gaining the skills &amp; knowledge.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                     
+                      <div>
+                        <h3>John Larson</h3>
+                        <h4>Tech Mahindra</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>It is the best name for offering technical education. After Terraform Training completion, I got a lot of calls from various reputed organizations.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Testimonials Section -->
+
+    <!-- Recent-posts Section - Home Page -->
+    <section id="recent-posts" class="recent-posts">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Posts</h2>
+        <p>Welcome to our  blogs hub. Here you can access all latest documentations for variety of live projects and trending technologies and topics</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="" class="img-fluid" >
+              </div>
+
+            
+
+              <h2 class="title">
+                <a href="blog-details1.html">Which cloud system is best, AWS or AZURE </a>
+              </h2>
+              
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author.jpg' %}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Maria Doe</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">oct 1, 2023</time>
+                  </p>
+                </div>
+              </div>
+               <br><br>
+			  
+                <small > <a href="blog.html">view all blogs &rarr; </a> </small>
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+
+                <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt="" class="img-fluid">
+                </div>
+
+              <h2 class="title">
+                <a href="blog-details2.html">Importance of Cyber security in business</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author-2.jpg' %}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Allisa Mayer</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">nov 5, 2023</time>
+                  </p>
+                </div>
+              </div>
+               <br><br>
+			  
+                <small > <a href="blog.html">view all blogs &rarr; </a> </small>
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-3.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="blog-details3.html">How to use Python for Data Science </a>
+              </h2>
+            
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author-3.jpg' %}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Mark Dower</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">oct 22, 2023</time>
+                  </p>
+                </div>
+              </div>
+			  <br><br>
+			  
+                <small > <a href="blog.html">view all blogs &rarr; </a> </small>
+			
+            </article>
+          </div><!-- End post list item -->
+
+        </div><!-- End recent posts list -->
+
+      </div>
+
+    </section><!-- End Recent-posts Section -->
+
+    <!-- Contact Section - Home Page -->
+    <section id="contact" class="contact">
+
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Hello, Friend start journey with us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>A108 Adam Street</p>
+                  <p>New York, NY 535022</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main>
+
+
+
+ {% endblock 'body' %} 
+
+ 

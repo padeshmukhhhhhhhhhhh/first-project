@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+
+  <main id="main">
+      
+
+    <!-- Portfolio-details Section - Portfolio Details Page -->
+    <section id="portfolio-details" class="portfolio-details">
+
+      <div class="container-fluid  " data-aos="fade-up">
+       
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-9" data-aos="fade-up">
+            <div class="portfolio-description">
+			     <section id="Overview">
+			           <h4 class="text-danger">UNIQUE CERTIFICATION CENTRAL</h4>
+					   <h2>Verify Your Certificate</h2>
+					   <br>
+					   <p>Get immediate verification of a person's AP2V certificate by entering the certificate number below.</p>
+					   <br><br>
+					   <label class="fw-bold"> Certification ID</label><br>
+					   <input type="text" class="mt-2" placeholder="Certificate Number"><br>
+					   <button type="button" class="btn btn-danger mt-2">Verify</button>
+
+
+					   
+					   
+					   
+					   
+				   </section>
+			   </div> 	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+		      <div class="card  p-3 border border-1">
+				 
+				    <div class="row">
+					   <div class="col-7 pt-2 fs-5">
+				                 Contact us <br>
+								 09210333323
+					     </div>			 
+                         <div class="col-5">
+						     <img src="{% static 'assets/img/portfolio/call.png' %}" alt="" class="flex-shrink-0 h-100 w-100 ">
+                         </div>						 
+					</div>
+				 </div>
+             <div class="portfolio-info mt-4">
+                <h3>Get more information</h3>
+                <ul>
+                   <li> <input type="text" class="rounded-pill p-1 " placeholder="Full name"> </li>
+                   <li> <input type="text"  class="rounded-pill p-1" placeholder="Email"> </li>
+                   <li>Enquiry for <input type="radio" name="one">myself <input type="radio" name ="one">company </li>
+                   <li> <input type="textarea"  class="rounded-pill p-1" placeholder="write message"> </li>
+                   <li><a href="#" class="btn btn-danger rounded-pill"> submit </a> </li>
+                </ul>
+             </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio-details Section -->
+
+  </main>
+   {% endblock 'body' %}
