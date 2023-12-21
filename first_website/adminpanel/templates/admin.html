@@ -1,0 +1,505 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+   <style>
+      .studentrecord {
+         visibility: hidden;
+      }
+
+      .courserecord {
+         visibility: hidden;
+      }
+   </style>
+   <script>
+     $(document).ready(function(){
+       $("#student").click(function(){
+           $("#studentrecord").toggleClass("studentrecord");
+       });
+
+       $("#course").click(function(){
+           $("#courserecord").toggleClass("courserecord");
+       });
+     })
+   </script>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="row p-0 m-0 proBanner" id="proBanner">
+        <div class="col-md-12 p-0 m-0">
+          <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
+            <div class="ps-lg-1">
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
+                <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo" target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
+              <button id="bannerClose" class="btn border-0 p-0">
+                <i class="mdi mdi-close text-white me-0"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="{% static 'assets/images/logo.svg' %}" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{% static 'assets/images/logo-mini.svg' %}" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="{% static 'assets/images/faces/face1.jpg' %}" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">David Greymaax</p>
+                </div>
+              </a>
+            
+                
+              
+            
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-block ms-auto">
+              
+              <a class="dropdown-item  fw-bold" href="{% url 'adminlogin' %}">
+                <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+            </li>  
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img src="{% static 'assets/images/faces/face1.jpg' %}" alt="profile">
+                  <span class="login-status online"></span>
+                  <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2">David Grey. H</span>
+                  <span class="text-secondary text-small">Project Manager</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="student" >
+                <span class="menu-title" >Student Records</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="course">
+                <span class="menu-title">Course Records</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper studentrecord" id="studentrecord">
+              <h2 class="text-center">Student Records</h2>
+              <button type="button" class="btn btn-gradient-primary btn-fw " data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Add New User</span></button>
+              <table class="table table-borderd mt-4">
+                <thead >
+                  <tr class="fw-bold table-primary">
+                    <th>student</th>
+                    <th>  Name </th>
+
+                    <th> Mobile </th>
+                    <th> Email </th>
+                    <th>DOB</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  {%  for i in stud  %}
+                  <tr>
+                     <td><img src="{% static 'assets/images/faces-clipart/pic-1.png' %}"></td>
+                     <td>{{i.name}}</td>
+                     <td>{{i.mobile}}</td>
+                     <td>{{i.Email}}</td>
+                     <td>{{i.dob}}</td>
+                     <td>{{i.course}}</td>
+                     <td> 
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#updateModal-{{i.id}}"><i class="mdi mdi-border-color"></i></a> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a type="button" data-bs-toggle="modal" data-bs-target="#deleteModal-{{i.id}}"><i class="mdi mdi-delete-forever"></i></a> 
+                    </td>
+                     
+                  </tr>
+                  {%  endfor  %}
+                </tbody>
+              </table>
+            </div>
+            <div class="content-wrapper courserecord" id="courserecord">
+              <h2 class="text-center">Course Records</h2>
+              <button type="button" class="btn btn-gradient-primary btn-fw " data-bs-toggle="modal" data-bs-target="#courseModal"><span>Add New Course</span></button>
+              <table class="table table-borderd mt-4">
+                <thead >
+                  <tr class="fw-bold table-primary">
+                   
+                    <th>  Title </th>
+
+                    <th> Description </th>
+                    <th> Duration </th>
+                    <th>Timing</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in newdata  %}
+                  <tr>
+                  
+                    <td>{{i.title}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.duration}}</td>
+                   
+                    <td>{{i.timing}}</td>
+                    <td>{{i.course}}</td>
+                    <td> 
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#updatecourseModal-{{i.id}}"><i class="mdi mdi-border-color"></i></a> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a type="button" data-bs-toggle="modal" data-bs-target="#coursedeleteModal-{{i.id}}"><i class="mdi mdi-delete-forever"></i></a> 
+                    </td>
+                  </tr>
+                 {% endfor %}
+                </tbody>
+              </table>
+            </div>
+             
+
+        </div>
+        <!-- modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form action="{% url 'adddata' %}" method="post">
+                {% csrf_token %}
+                <div class="modal-header">						
+                  <h4 class="modal-title">Add User</h4>
+                  
+                </div>
+                <div class="modal-body">					
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name"  placeholder="Enter name" required>
+                  </div>
+                  
+                 
+                  
+                  <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" class="form-control" name="mobile"  placeholder="Enter phone" required>
+                  </div>	
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email"  placeholder="Enter email" required>
+                  </div>
+                  <div class="form-group">
+                    <label>DOB</label>
+                    <input type="date" class="form-control" name="dob"  placeholder="Enter date of birth" required>
+                  </div>	
+                  <div class="form-group">
+                    <label>Course</label>
+                    <textarea class="form-control" name="course"  placeholder="Enter course" required></textarea>
+                  </div>			
+                </div>
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-primary">Save changes</button>
+                </div>
+               </form> 
+
+            </div>
+          </div>
+        </div>
+        <!--endmodal-->
+         
+         <!-- modalupdate-->
+           {% for i in stud %}
+         <div class="modal fade" id="updateModal-{{i.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            
+            <div class="modal-content">
+              <form action="update/{{i.id}}" method="post">
+                {% csrf_token %}
+                <div class="modal-header">						
+                  <h4 class="modal-title">Update Student</h4>
+                  
+                </div>
+                  
+                <div class="modal-body">					
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name" value="{{i.name}}" placeholder="Enter name" required>
+                  </div>
+                  <div class="form-group">
+                    <label>mobile</label>
+                    <input class="form-control" name="mobile" value="{{i.mobile}}" placeholder="Enter mobile" required>
+                  </div>
+                 
+                  
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" value="{{i.Email}}"  placeholder="Enter email" required>
+                  </div>	
+                  <div class="form-group">
+                    <label>dob</label>
+                    <input type="date" class="form-control" name="dob" value="{{i.dob|date:'Y-m-d'}}"  placeholder="Enter date of birth" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Course</label>
+                    <input type="text" class="form-control" name="course" value="{{i.course}}" placeholder="Enter course" required>
+                  </div>	
+                  			
+                </div>
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-primary">Save changes</button>
+                </div>
+               </form> 
+
+            </div>
+          </div>
+        </div>
+          {% endfor  %}
+        <!--endmodal-->
+         <!-- Modal delete -->
+          {% for i in stud %}
+       <div class="modal fade" id="deleteModal-{{i.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <form action="delete/{{i.id}}" method="post">
+               {% csrf_token %}
+               <div class="modal-header">						
+                <label>Yon want to delete {{i.name}} ? </label>
+                  <br>
+                 
+               </div>
+               				
+                 
+                 
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="sumbit" class="btn btn-primary">delete</button>
+               </div>
+              </form> 
+ 
+           </div>
+         </div>
+       </div>
+          {% endfor %}
+        <!-- End Modal -->
+
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+       
+
+
+        
+
+
+
+
+
+
+
+
+
+        <!-- modalcourse-->
+        <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form action="{% url 'addcourse' %}" method="post">
+                {% csrf_token %}
+                <div class="modal-header">						
+                  <h4 class="modal-title">Add Course</h4>
+                  
+                </div>
+                <div class="modal-body">					
+                  <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title"  placeholder="Enter title" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" name="description"  placeholder="Enter description" required></textarea>
+                  </div>
+                 
+                  
+                  <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" class="form-control" name="duration"  placeholder="Enter duration" required>
+                  </div>	
+                  <div class="form-group">
+                    <label>Timing</label>
+                    <input type="text" class="form-control" name="timing"  placeholder="Enter Timing" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Course</label>
+                    <input type="text" class="form-control" name="course"  placeholder="Enter course" required>
+                  </div>	
+                  			
+                </div>
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-primary">Save changes</button>
+                </div>
+               </form> 
+
+            </div>
+          </div>
+        </div>
+        <!--endmodal-->
+
+         <!-- modalcourseupdate-->
+         {% for i in newdata %} 
+         <div class="modal fade" id="updatecourseModal-{{i.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            
+            <div class="modal-content">
+              <form action="updatecourse/{{i.id}}" method="post">
+                {% csrf_token %}
+                <div class="modal-header">						
+                  <h4 class="modal-title">Update Course</h4>
+                  
+                </div>
+                <div class="modal-body">					
+                  <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" name="title" value="{{i.title}}" placeholder="Enter title" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" name="description" value="" placeholder="Enter description" required>{{i.description}}</textarea>
+                  </div>
+                 
+                  
+                  <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" class="form-control" name="duration" value="{{i.duration}}"  placeholder="Enter duration" required>
+                  </div>	
+                  <div class="form-group">
+                    <label>Timing</label>
+                    <input type="text" class="form-control" name="timing" value="{{i.timing}}"  placeholder="Enter Timing" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Course</label>
+                    <input type="text" class="form-control" name="course" value="{{i.course}}" placeholder="Enter course" required>
+                  </div>	
+                  			
+                </div>
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="sumbit" class="btn btn-primary">Save changes</button>
+                </div>
+               </form> 
+
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <!--endmodal-->
+         <!-- Edit Modal delete -->
+       {%  for i in newdata %}
+       <div class="modal fade" id="coursedeleteModal-{{i.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <form action="deletecourse/{{i.id}}" method="post">
+               {% csrf_token %}
+               <div class="modal-header">						
+                <label>Yon want to delete {{i.title}} course ? </label>
+                  <br>
+                 
+               </div>
+               				
+                 
+                 
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="sumbit" class="btn btn-primary">delete</button>
+               </div>
+              </form> 
+ 
+           </div>
+         </div>
+       </div>
+       {% endfor %}
+        <!-- End Modal -->
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{% static 'assets/vendors/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.cookie.js' %}" type="text/javascript"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{% static 'assets/js/off-canvas.js' %}"></script>
+    <script src="{% static 'assets/js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'assets/js/misc.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/todolist.js' %}"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'body' %}
+ 
+
+  <main id="main">
+
+      <!-- Portfolio Details Page Title & Breadcrumbs -->
+    <div data-aos="fade" class="page-title bg-light text-dark">
+      <div class="heading">
+        <div class="container ">
+          <div class="row d-flex   ">
+            <div class="col-lg-8">
+              <h1 class="">All Course</h1>
+              <p class="mb-0">Give your career the boost that it needs! Avail premium quality IT training from the expert team at AP2V </p>
+			  
+		     </div>
+			<div class="col-lg-4">
+			  <img src="{% static 'assets/img/about.png' %}" class="w-100 h-100" alt="python">
+			</div>
+			 
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">All Course</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio-details Section - Portfolio Details Page -->
+    <section id="portfolio-details" class="portfolio-details">
+       
+        <div class="row justify-content-between gy-4 mt-4">
+           {% for i in new %}
+            <div class="col pt-2">						   
+                <div class="card programming " style="width: 18rem;">
+                   <div class="card-header p-1 py-3" style="background-color:#1A42C6 ;"> 
+                      <h1 class="text-white text-center">{{i.title}}</h1>
+                   </div>
+                   <div class="card-body">
+                     
+                      <p class="card-text"><span class="fw-bold">Topics:</span>&nbsp;&nbsp;{{i.course}}</p>
+                      <p><span class="fw-bold">Duration:</span> &nbsp;&nbsp; {{i.duration}}</p>
+                      <p><span class="fw-bold">Timing:</span></bold>&nbsp;&nbsp; {{i.timing}}</p>
+                      <a href="index.html" class="btn btn-secondary text-center">Apply Now</a>
+                      <a href="portfolio-details.html" class="btn btn-secondary text-center">View Details</a>
+                     
+                   </div>
+                </div>
+              </div>
+             {% endfor %} 
+        </div>    
+         
+
+       
+
+     
+
+    </section><!-- End Portfolio-details Section -->
+
+    
+   
+  </main>
+  {% endblock 'body' %}

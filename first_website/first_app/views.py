@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from adminpanel.models import student, course
 # Create your views here.
 def index(request):
 
@@ -24,9 +24,19 @@ def blogdetails(request):
 
     return render(request,"blog-details1.html")
 def login(request):
+    if request.method == "POST":
+        email = request.POST["email1"]
+        
+        data=student.objects.filter(Email=email)
+        context={"data":data}
+        if data is not None:
+           print("yes")
+           return render(request, "studentdashboard.html",context)
+    return render(request,"newlogin.html")
 
-    return render(request,"login.html")
+def adminlogin(request):
 
+    return render(request,"adminlogin.html")
 def signup(request):
 
     return render(request,"signup.html")
@@ -71,3 +81,12 @@ def wu(request):
 def about(request):
 
     return render(request,"About.html")
+def allnew(request):
+    new=course.objects.all()
+    print(new)
+    dict={"new":new}
+    return render(request, "allnew.html",dict)
+
+def profile(request):
+
+    return render(request,"profile.html")
