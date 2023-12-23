@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from adminpanel.models import student, course
+import random
+from django.core.mail import send_mail
 # Create your views here.
 def index(request):
 
@@ -23,17 +25,57 @@ def blog(request):
 def blogdetails(request):
 
     return render(request,"blog-details1.html")
+
+
+def generate_otp():
+    return str(random.randint(100000, 999999))
 def login(request):
     if request.method == "POST":
         email = request.POST["email1"]
         
-        data=student.objects.filter(Email=email)
-        context={"data":data}
-        if data is not None:
-           print("yes")
-           return render(request, "studentdashboard.html",context)
-    return render(request,"newlogin.html")
+        otp = generate_otp()
+          
+        send_mail(
+            'Subject: Your OTP',
+            f'Your OTP is: {otp}',
+            'djnagomail@gmail.com',
+            [email],
+            fail_silently=False,
 
+            )
+
+        # Save the OTP in the session for later validation
+        request.session['otp'] = otp
+        request.session['email'] = email
+        return redirect("validate_otp")
+
+
+    return render(request,"onlyemail.html")
+
+
+
+def validate_otp(request):
+    if request.method == 'POST':
+        user_entered_otp = request.POST["otp"]
+        stored_otp = request.session['otp']
+        print(stored_otp)
+        email_store = request.session['email']
+
+        print(email_store)
+        if user_entered_otp == stored_otp :
+
+            data=student.objects.filter(Email=email_store )
+            print(data)
+            context={"data":data}
+            if len(data) is not 0 :
+                print("yes")
+
+                return render(request, "studentdashboard.html",context)
+
+            
+            
+
+    return render(request,"onlyotp.html")  # Redirect to the OTP input form
 def adminlogin(request):
 
     return render(request,"adminlogin.html")

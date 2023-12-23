@@ -10,6 +10,7 @@ urlpatterns = [
     path('blog',views.blog,name="blog"),
     path('blogdetails',views.blogdetails,name="blogdetails"),
     path('login',views.login,name="login"),
+    path('validate_otp',views.validate_otp,name="validate_otp"),
     path('adminlogin',views.adminlogin,name="adminlogin"),
     path('signup',views.signup,name="signup"),
     path('contact',views.contact,name="contact"),
